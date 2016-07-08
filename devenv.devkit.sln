@@ -5,10 +5,14 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A95B2ECD-73C8-4426-B1FA-518F0734C989}"
 	ProjectSection(SolutionItems) = preProject
+		deploy-scripts.bat = deploy-scripts.bat
 		install-choco.bat = install-choco.bat
 		install.bat = install.bat
 		packages.txt = packages.txt
 		Readme.txt = Readme.txt
+		run-choco.bat = run-choco.bat
+		uninstall.bat = uninstall.bat
+		upgrade.bat = upgrade.bat
 	EndProjectSection
 EndProject
 Global

@@ -2,11 +2,6 @@
 
 setlocal
 
-set "Packages=%~dp0packages.txt"
-set "Option=%~1"
-
-for /f "tokens=*" %%f in (%Packages%) do (
-    echo choco %Option% %%f
-)
+start "install" "%~dp0run-choco.bat" install
 
 endlocal
