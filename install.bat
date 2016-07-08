@@ -3,9 +3,10 @@
 setlocal
 
 set "Packages=%~dp0packages.txt"
+set "Option=%~1"
 
 for /f "tokens=*" %%f in (%Packages%) do (
-    echo choco install %%f
+    echo choco %Option% %%f
 )
 
 endlocal

@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A95B
 		install-choco.bat = install-choco.bat
 		install.bat = install.bat
 		packages.txt = packages.txt
+		Readme.txt = Readme.txt
 	EndProjectSection
 EndProject
 Global
