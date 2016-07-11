@@ -2,6 +2,5 @@
 
 setlocal
 
-start "upgrade" "%~dp0run-choco.bat" upgrade
-
+start "upgrade" cmd /k call "%~dp0run-choco.bat" upgrade
 endlocal

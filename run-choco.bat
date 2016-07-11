@@ -6,7 +6,7 @@ set "Packages=%~dp0packages.txt"
 set "Option=%~1"
 
 for /f "tokens=*" %%f in (%Packages%) do (
-    choco %Option% /y /f %%f
+    choco %Option% /y /f /d /v %%f
 )
 
 endlocal
