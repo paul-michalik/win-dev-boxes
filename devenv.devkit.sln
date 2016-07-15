@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project-templates", "projec
 		project-templates\.gitignore = project-templates\.gitignore
 		project-templates\[project-name].cpp = project-templates\[project-name].cpp
 		project-templates\[project-name].h = project-templates\[project-name].h
+		project-templates\[project-name]_build_info.txt = project-templates\[project-name]_build_info.txt
 		project-templates\[project-name]_tests.cpp = project-templates\[project-name]_tests.cpp
 		project-templates\CMakeLists.txt = project-templates\CMakeLists.txt
 	EndProjectSection

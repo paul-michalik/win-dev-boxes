@@ -51,15 +51,6 @@ exit /b %errorlevel%
 exit /b %errorlevel%
 
 :PopulateProjectDir
-    md "%ProjectDir%\build"
-    if %errorlevel% gtr 0 exit %errorlevel%
-
-    md "%ProjectDir%\src"
-    if %errorlevel% gtr 0 exit %errorlevel%
-
-    md "%ProjectDir%\tests"
-    if %errorlevel% gtr 0 exit %errorlevel%
-
     xcopy "%~dp0%ProjectTemplatesDir%\.git*" "%ProjectDir%\" /y /i
     if %errorlevel% gtr 0 exit %errorlevel%
      
@@ -69,7 +60,10 @@ exit /b %errorlevel%
     xcopy "%~dp0%ProjectTemplatesDir%\[project-name].cpp" "%ProjectDir%\src\%ProjectName%.cpp*" /y
     if %errorlevel% gtr 0 exit %errorlevel%
 
-    xcopy "%~dp0%ProjectTemplatesDir%\[project-name]_test.cpp" "%ProjectDir%\tests\%ProjectName%_tests.cpp*" /y
+    xcopy "%~dp0%ProjectTemplatesDir%\[project-name]_tests.cpp" "%ProjectDir%\tests\%ProjectName%_tests.cpp*" /y
+    if %errorlevel% gtr 0 exit %errorlevel%
+
+    xcopy "%~dp0%ProjectTemplatesDir%\[project-name]_build_info.txt" "%ProjectDir%\build\%ProjectName%_build_info.txt*" /y
     if %errorlevel% gtr 0 exit %errorlevel%
 exit /b %errorlevel%
 

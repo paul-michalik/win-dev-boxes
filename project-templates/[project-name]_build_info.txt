@@ -1,0 +1,1 @@
+This folder contains special items used for custom build systems, e.g. hand-crafted MSBuild scripts. 
