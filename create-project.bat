@@ -4,7 +4,7 @@ setlocal
 
 set "ProjectName=%~1"
 set "ProjectDir=%~2"
-set "ProjectTemplatesDir=create-project-templates"
+set "ProjectTemplatesDir=project-templates"
 
 call :GetProjectNameAndDir
 if %errorlevel% gtr 0 start "Error" echo Could not determine project location for %ProjectDir%. & exit /b %errorlevel%
