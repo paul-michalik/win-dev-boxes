@@ -6,17 +6,27 @@ set "ProjectName=%~1"
 set "ProjectDir=%~2"
 set "ProjectTemplatesDir=project-templates"
 
+echo 1
+
 call :GetProjectNameAndDir
 if %errorlevel% gtr 0 start "Error" echo Could not determine project location for %ProjectDir%. & exit /b %errorlevel%
+
+echo 2
 
 call :CreateProjectDir
 if %errorlevel% gtr 0 start "Error" echo Could not create project folder: %ProjectDir% & exit /b %errorlevel%
 
+echo 3
+
 call :PopulateProjectDir
 if %errorlevel% gtr 0 start "Error" echo Could not populate project folder: %ProjectDir% & exit /b %errorlevel%
 
+echo 4
+
 call :RewriteCMakeLists
 if %errorlevel% gtr 0 start "Error" echo Could not generate %ProjectDir%\CMakeLists.txt & exit /b %errorlevel%
+
+echo 5
 
 rem ==========
 rem Procedures
@@ -57,6 +67,9 @@ exit /b %errorlevel%
     if %errorlevel% gtr 0 exit %errorlevel%
 
     xcopy "%~dp0%ProjectTemplatesDir%\[project-name].cpp" "%ProjectDir%\src\%ProjectName%.cpp*" /y
+    if %errorlevel% gtr 0 exit %errorlevel%
+
+    xcopy "%~dp0%ProjectTemplatesDir%\[project-name]_test.cpp" "%ProjectDir%\tests\%ProjectName%_tests.cpp*" /y
     if %errorlevel% gtr 0 exit %errorlevel%
 exit /b %errorlevel%
 
