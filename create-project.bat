@@ -4,6 +4,7 @@ setlocal
 
 set "ProjectName=%~1"
 set "ProjectDir=%~2"
+set "ProjectTemplatesDir=create-project-templates"
 
 call :GetProjectNameAndDir
 if %errorlevel% gtr 0 start "Error" echo Could not determine project location for %ProjectDir%. & exit /b %errorlevel%
@@ -49,10 +50,13 @@ exit /b %errorlevel%
     md "%ProjectDir%\tests"
     if %errorlevel% gtr 0 exit %errorlevel%
 
-    xcopy "%~dp0bootstrap-project-templates\.git*" "%ProjectDir%\" /y /i
+    xcopy "%~dp0%ProjectTemplatesDir%\.git*" "%ProjectDir%\" /y /i
     if %errorlevel% gtr 0 exit %errorlevel%
      
-    xcopy "%~dp0bootstrap-project-templates\[project-name].h" "%ProjectDir%\%ProjectName%.h*" /y
+    xcopy "%~dp0%ProjectTemplatesDir%\[project-name].h" "%ProjectDir%\%ProjectName%.h*" /y
+    if %errorlevel% gtr 0 exit %errorlevel%
+
+    xcopy "%~dp0%ProjectTemplatesDir%\[project-name].cpp" "%ProjectDir%\src\%ProjectName%.cpp*" /y
     if %errorlevel% gtr 0 exit %errorlevel%
 exit /b %errorlevel%
 
@@ -61,7 +65,7 @@ setlocal enableDelayedExpansion
     rem 
     rem Replace the placeholder "[project-name]" with real project name while preserving formatting!
     rem 
-    for /f "tokens=1* delims=]" %%f in ('find /v /n "" "%~dp0bootstrap-project-templates%\CMakeLists.txt"') do (
+    for /f "tokens=1* delims=]" %%f in ('find /v /n "" "%~dp0%ProjectTemplatesDir%%\CMakeLists.txt"') do (
         set "OldLine=%%g"
         if /i "!OldLine!"=="" (
             echo. >> "%ProjectDir%\CMakeLists.txt"

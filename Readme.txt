@@ -19,3 +19,14 @@ Shortcut scripts
 "upgrade" - upgrades chcolatey and all packages listed in packages.txt
 
 "uninstall" - uninstalls all packages listed in packages.txt
+
+=================
+Project creation script
+=================
+
+The script "create-project.bat" can be used to create a skeleton for a module project.
+1. create-project.bat <project-name> <project-directory> -> creates a project under a specified directory, e.g.:
+create-project.bat hello D:\Sources -> creates a project skeleton in D:\Sources\hello. 
+2. create-project.bat <project-name> -> creates a project as %USERPROFILE%\<project-name>
+3. create-project.bat -> creates a project as %USERPROFILE%\<automatically-generated-name>
+All other invokation patterns are an error.
