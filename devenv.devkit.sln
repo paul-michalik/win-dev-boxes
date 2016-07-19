@@ -5,8 +5,8 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A95B2ECD-73C8-4426-B1FA-518F0734C989}"
 	ProjectSection(SolutionItems) = preProject
-		create-project-devkit.bat = create-project-devkit.bat
-		create-project.bat = create-project.bat
+		create-module-devkit.bat = create-module-devkit.bat
+		create-module.bat = create-module.bat
 		deploy-scripts.bat = deploy-scripts.bat
 		install-choco.bat = install-choco.bat
 		install.bat = install.bat
@@ -17,15 +17,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A95B
 		upgrade.bat = upgrade.bat
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project-templates", "project-templates", "{2D3CB987-68D9-43CE-B736-6061819D2CB5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "module-templates", "module-templates", "{2D3CB987-68D9-43CE-B736-6061819D2CB5}"
 	ProjectSection(SolutionItems) = preProject
-		project-templates\.gitattributes = project-templates\.gitattributes
-		project-templates\.gitignore = project-templates\.gitignore
-		project-templates\[project-name].cpp = project-templates\[project-name].cpp
-		project-templates\[project-name].h = project-templates\[project-name].h
-		project-templates\[project-name]_build_info.txt = project-templates\[project-name]_build_info.txt
-		project-templates\[project-name]_tests.cpp = project-templates\[project-name]_tests.cpp
-		project-templates\CMakeLists.txt = project-templates\CMakeLists.txt
+		module-templates\.gitattributes = module-templates\.gitattributes
+		module-templates\.gitignore = module-templates\.gitignore
+		module-templates\[project-name].cpp = module-templates\[project-name].cpp
+		module-templates\[project-name].h = module-templates\[project-name].h
+		module-templates\[project-name]_build_info.txt = module-templates\[project-name]_build_info.txt
+		module-templates\[project-name]_tests.cpp = module-templates\[project-name]_tests.cpp
+		module-templates\CMakeLists-devkit.txt = module-templates\CMakeLists-devkit.txt
+		module-templates\CMakeLists.txt = module-templates\CMakeLists.txt
 	EndProjectSection
 EndProject
 Global
