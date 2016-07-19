@@ -21,12 +21,23 @@ Shortcut scripts
 "uninstall" - uninstalls all packages listed in packages.txt
 
 =================
-Project creation script
+Module creation helpers
 =================
 
-The script "create-project.bat" can be used to create a skeleton for a module project.
-1. create-project.bat <project-name> <project-directory> -> creates a project under a specified directory, e.g.:
-create-project.bat hello D:\Sources -> creates a project skeleton in D:\Sources\hello. 
-2. create-project.bat <project-name> -> creates a project as %USERPROFILE%\<project-name>
-3. create-project.bat -> creates a project as %USERPROFILE%\<automatically-generated-name>
-All other invokation patterns are an error.
+The script "create-module.bat" can be used to create a skeleton for a module or a module devkit. Usage:
+create-module </d> <module-name> <module-directory>. If option /d is present as a first argument a devkit skeleton
+is created. 
+1. create-module.bat <module-name> <module-directory> -> creates a module under a specified directory, e.g.:
+create-module.bat hello D:\Sources -> creates a module skeleton in D:\Sources\hello. 
+2. create-module.bat <module-name> -> creates a module as %USERPROFILE%\<module-name>
+3. create-module.bat -> creates a module as %USERPROFILE%\<automatically-generated-name>
+
+Add /d if you wish to create skeleton for a devkit: create-module.bat /d hello D:\Sources -> creates a module devkit skeleton
+in D:\Sources\hello.devkit. The usual usage pattern would be:
+1. create-module.bat /d hello D:\Source = creates D:\Source\hello.devkit  
+2. create-module.bat hello D:\Source\hello.devkit = creates D:\Source\hello.devkit\hello 
+3. Create Git repository at D:\Source\hello.devkit\hello and push it to a Git remote server
+4. Delete D:\Source\hello.devkit\hello
+5. Create Git repository at D:\Source\hello.devkit
+6. Add and initialize Git submodule hello inside hello.devkit using the previously pushed hello.git
+7. Push D:\Source\hello.devkit to a Git remote server
