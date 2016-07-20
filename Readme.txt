@@ -46,9 +46,9 @@ Add /d if you wish to create skeleton for a devkit: create-module.bat /d hello D
 in D:\Sources\hello.devkit. The usual usage pattern would be:
 1. "create-module.bat /d hello D:\Source" = creates D:\Source\hello.devkit skeleton
 2. "create-module.bat hello D:\Source\hello.devkit" = creates D:\Source\hello.devkit\hello skeleton
-3. Create Git repository at D:\Source\hello.devkit\hello and push it to a Git remote server
+3. Create Git repository at D:\Source\hello.devkit\hello, set up a remote and push it to a Git remote server
 4. Delete D:\Source\hello.devkit\hello
-5. Create Git repository at D:\Source\hello.devkit
-6. Add and initialize Git submodule hello inside hello.devkit using the previously pushed hello.git
-7. Push D:\Source\hello.devkit to a Git remote server
+5. Create Git repository at D:\Source\hello.devkit, set up a remote and push it to a Git remote server
+6. Add submodule hello using the remote repository created in step 3 and check out the desired branch. 
+7. Commit the hello.devkit and push it to the Git remote configured in step 5
 8. Start working
