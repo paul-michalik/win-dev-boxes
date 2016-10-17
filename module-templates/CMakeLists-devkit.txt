@@ -1,11 +1,17 @@
-cmake_minimum_required(VERSION 3.4 FATAL_ERROR) 
-  
-include(CTest)
+cmake_minimum_required(VERSION 3.0 FATAL_ERROR) 
 
-#include("build-recipes-cmake/boost.cmake")
-#include("build-recipes-cmake/gtest.cmake")
-# add another build recipes as required
+set(CMAKE_USER_MAKE_RULES_OVERRIDE 
+    build-recipes-cmake/cxx-flags-default-overrides.cmake)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+project([module-name].devkit VERSION 0.1)
+
+include(CTest) 
+include(build-recipes-cmake/boost.cmake)
+# add other recipes as required
+
+include_directories(. [module-name])
 
 add_subdirectory([module-name])
+if(BUILD_TESTING)
+    add_subdirectory(tests/[module-name]_tests)
+endif()    
