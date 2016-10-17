@@ -9,9 +9,9 @@ include(CTest)
 include(build-recipes-cmake/boost.cmake)
 # add other recipes as required
 
-include_directories(. [module-name])
+include_directories(src)
 
-add_subdirectory([module-name])
+add_subdirectory(src/[module-name])
 if(BUILD_TESTING)
     add_subdirectory(tests/[module-name]_tests)
 endif()    

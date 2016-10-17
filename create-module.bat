@@ -168,29 +168,7 @@ setlocal enableDelayedExpansion
 
     echo Source=%Source% & echo Target=%Target%
  
-    call replace-string-in-file.bat "[module-name]" "%ModuleName%" "%Source%" >> "%Target%"
-
-rem    for /f "tokens=1* delims=]" %%f in ('find /v /n "" "%Source%"') do (
-rem        set "OldLine=%%g"
-rem        echo OldLine=!OldLine!
-rem        if /i "!OldLine!"=="" (
-rem           echo. 
-rem            echo. >> "%Target%"
-rem        ) else (
-rem            rem replace [module-name] token
-rem            set "NewLine=!OldLine:[module-name]=%ModuleName%!"
-rem            
-rem            rem if after removing whitespaces the line is empty, just output an empty line
-rem            set "NewLineWithoutWhitespaces=!NewLine: =!"
-rem            if /i not "!NewLineWithoutWhitespaces!"=="" (
-rem                echo !NewLine!
-rem                echo !NewLine! >> "%Target%"
-rem            ) else (
-rem                echo.
-rem                echo. >> "%Target%"
-rem            )
-rem        )
-rem    )
+    call "%~dp0replace-string-in-file.bat" "[module-name]" "%ModuleName%" "%Source%" >> "%Target%"
 endlocal
 exit /b %errorlevel%
     
