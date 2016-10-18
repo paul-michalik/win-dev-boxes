@@ -1,5 +1,7 @@
 #pragma once
 
 namespace harman {
-    // Add your first public interface here!
+    namespace ns_[module-name] {
+        // Add your code here!
+    }
 }

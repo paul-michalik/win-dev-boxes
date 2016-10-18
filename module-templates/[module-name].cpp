@@ -1,4 +1,5 @@
-
 namespace harman {
-    // Add your code here!
+    namespace ns_[module-name] {
+        // Add your code here!
+    }
 }

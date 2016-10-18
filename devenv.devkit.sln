@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A95B
 		install.bat = install.bat
 		packages.txt = packages.txt
 		Readme.txt = Readme.txt
+		replace-string-in-file.bat = replace-string-in-file.bat
 		run-choco.bat = run-choco.bat
 		uninstall.bat = uninstall.bat
 		upgrade.bat = upgrade.bat
@@ -21,12 +22,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "module-templates", "module-
 	ProjectSection(SolutionItems) = preProject
 		module-templates\.gitattributes = module-templates\.gitattributes
 		module-templates\.gitignore = module-templates\.gitignore
-		module-templates\[project-name].cpp = module-templates\[project-name].cpp
-		module-templates\[project-name].h = module-templates\[project-name].h
-		module-templates\[project-name]_build_info.txt = module-templates\[project-name]_build_info.txt
-		module-templates\[project-name]_tests.cpp = module-templates\[project-name]_tests.cpp
+		module-templates\[module-name].cpp = module-templates\[module-name].cpp
+		module-templates\[module-name].h = module-templates\[module-name].h
+		module-templates\[module-name]_tests.cpp = module-templates\[module-name]_tests.cpp
 		module-templates\CMakeLists-devkit.txt = module-templates\CMakeLists-devkit.txt
-		module-templates\CMakeLists.txt = module-templates\CMakeLists.txt
+		module-templates\CMakeLists-src.txt = module-templates\CMakeLists-src.txt
+		module-templates\CMakeLists-tests.txt = module-templates\CMakeLists-tests.txt
 	EndProjectSection
 EndProject
 Global
