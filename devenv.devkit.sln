@@ -5,7 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A95B2ECD-73C8-4426-B1FA-518F0734C989}"
 	ProjectSection(SolutionItems) = preProject
-		create-module-devkit.bat = create-module-devkit.bat
 		create-module.bat = create-module.bat
 		deploy-scripts.bat = deploy-scripts.bat
 		install-choco.bat = install-choco.bat
