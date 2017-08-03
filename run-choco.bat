@@ -12,6 +12,7 @@ if /i not "%~2"=="" set "PackageList=%~2"
 set "PackageList=%~dp0%PackageList%"
 
 echo choco feature enable -n stopOnFirstPackageFailure 
+echo choco upgrade chocolatey /y /d /v
 
 for /f "tokens=*" %%f in (%PackageList%) do (
     echo choco %ChocoOperation% /y /d /v %%f
