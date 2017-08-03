@@ -1,5 +1,0 @@
-git
-tortoisegit
-cmake
-visualstudio2015community 
-python2
