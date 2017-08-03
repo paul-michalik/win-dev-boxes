@@ -3,33 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A95B2ECD-73C8-4426-B1FA-518F0734C989}"
-	ProjectSection(SolutionItems) = preProject
-		create-module.bat = create-module.bat
-		deploy-scripts.bat = deploy-scripts.bat
-		install-choco.bat = install-choco.bat
-		install.bat = install.bat
-		packages.txt = packages.txt
-		Readme.txt = Readme.txt
-		replace-string-in-file.bat = replace-string-in-file.bat
-		run-choco.bat = run-choco.bat
-		uninstall.bat = uninstall.bat
-		upgrade.bat = upgrade.bat
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "module-templates", "module-templates", "{2D3CB987-68D9-43CE-B736-6061819D2CB5}"
-	ProjectSection(SolutionItems) = preProject
-		module-templates\.gitattributes = module-templates\.gitattributes
-		module-templates\.gitignore = module-templates\.gitignore
-		module-templates\[module-name].cpp = module-templates\[module-name].cpp
-		module-templates\[module-name].h = module-templates\[module-name].h
-		module-templates\[module-name]_tests.cpp = module-templates\[module-name]_tests.cpp
-		module-templates\CMakeLists-devkit.txt = module-templates\CMakeLists-devkit.txt
-		module-templates\CMakeLists-src.txt = module-templates\CMakeLists-src.txt
-		module-templates\CMakeLists-tests.txt = module-templates\CMakeLists-tests.txt
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scripts", "scripts\scripts.vcxproj", "{DB2B840F-56A5-4D09-9AB6-B42D11D94880}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB2B840F-56A5-4D09-9AB6-B42D11D94880}.Release|x86.ActiveCfg = Release|Win32
+		{DB2B840F-56A5-4D09-9AB6-B42D11D94880}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

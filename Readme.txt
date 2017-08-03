@@ -29,26 +29,3 @@ provileges = "run as administrator".
 "upgrade" - upgrades chcolatey and all packages listed in packages.txt
 
 "uninstall" - uninstalls all packages listed in packages.txt
-
-=================
-Module creation helpers
-=================
-
-The script "create-module.bat" can be used to create a skeleton for a module or a module devkit. Usage:
-create-module </d> <module-name> <module-directory>. If option /d is present as a first argument a devkit skeleton
-is created. 
-1. create-module.bat <module-name> <module-directory> -> creates a module under a specified directory, e.g.:
-create-module.bat hello D:\Sources -> creates a module skeleton in D:\Sources\hello. 
-2. create-module.bat <module-name> -> creates a module as %USERPROFILE%\<module-name>
-3. create-module.bat -> creates a module as %USERPROFILE%\<automatically-generated-name>
-
-Add /d if you wish to create skeleton for a devkit: create-module.bat /d hello D:\Sources -> creates a module devkit skeleton
-in D:\Sources\hello.devkit. The usual usage pattern would be:
-1. "create-module.bat /d hello D:\Source" = creates D:\Source\hello.devkit skeleton
-2. "create-module.bat hello D:\Source\hello.devkit" = creates D:\Source\hello.devkit\hello skeleton
-3. Create Git repository at D:\Source\hello.devkit\hello, set up a remote and push it to a Git remote server
-4. Delete D:\Source\hello.devkit\hello
-5. Create Git repository at D:\Source\hello.devkit, set up a remote and push it to a Git remote server
-6. Add submodule hello using the remote repository created in step 3 and check out the desired branch. 
-7. Commit the hello.devkit and push it to the Git remote configured in step 5
-8. Start working

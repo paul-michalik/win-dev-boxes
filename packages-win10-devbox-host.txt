@@ -1,0 +1,4 @@
+git
+tortoisegit
+docker-for-windows
+vagrant
