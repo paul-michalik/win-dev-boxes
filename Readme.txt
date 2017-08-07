@@ -2,7 +2,7 @@
 Rationale
 =================
 
-Scripts to set up or bootstrp virtual and physical Windows development or CI/CD boxes.
+Scripts to set up or bootstrap virtual and physical Windows development or CI/CD boxes.
 
 1. Add new packages-*.txt list as required or re-use the existing one. The packages-*.txt files contain a new-line separated list of chocolatey packages with proper arguments forwarded to choco. There are few shortcut scripts intended to ease 
 the usage but of course you can use the chcoco command line or the Chocolatey GUI app (= https://chocolatey.org/packages/ChocolateyGUI) directly. 
