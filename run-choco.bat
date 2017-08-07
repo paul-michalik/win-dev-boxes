@@ -13,6 +13,7 @@ set "PackageList=%~dp0%PackageList%"
 
 rem choco feature enable -n stopOnFirstPackageFailure 
 choco upgrade chocolatey /y /d /v
+choco install dotnet4.7 /y /d /v
 
 for /f "tokens=*" %%f in (%PackageList%) do (
     choco %ChocoOperation% /y /d /v %%f
