@@ -18,6 +18,27 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\deploy-scripts.bat" />
+    <None Include="..\..\install-choco.bat" />
+    <None Include="..\..\install.bat" />
+    <None Include="..\..\run-choco.bat" />
+    <None Include="..\..\uninstall.bat" />
+    <None Include="..\..\upgrade.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\packages-win10-cibox.txt" />
+    <Text Include="..\..\packages-win10-devbox-host.txt" />
+    <Text Include="..\..\packages-win10-devbox.txt" />
+    <Text Include="..\..\packages-win7-devbox-host.txt" />
+    <Text Include="..\..\packages-win7-devbox.txt" />
+    <Text Include="..\..\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\packages-win7-devbox-host.config" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DB2B840F-56A5-4D09-9AB6-B42D11D94880}</ProjectGuid>
     <RootNamespace>scripts</RootNamespace>
@@ -124,22 +145,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <None Include="..\deploy-scripts.bat" />
-    <None Include="..\install-choco.bat" />
-    <None Include="..\install.bat" />
-    <None Include="..\run-choco.bat" />
-    <None Include="..\uninstall.bat" />
-    <None Include="..\upgrade.bat" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\packages-win10-cibox.txt" />
-    <Text Include="..\packages-win10-devbox-host.txt" />
-    <Text Include="..\packages-win10-devbox.txt" />
-    <Text Include="..\packages-win7-devbox.txt" />
-    <Text Include="..\Readme.txt" />
-    <Text Include="..\packages-win7-devbox-host.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
