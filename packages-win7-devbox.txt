@@ -1,4 +1,0 @@
-git --packageParameters "/NoShellIntegration /GitOnlyOnPath"
-tortoisegit
-cmake
-visualstudio2017community --package-parameters "--lang en-US --locale en-US --includeRecommended --includeOptional --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.ManagedDesktop"
