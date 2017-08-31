@@ -7,8 +7,14 @@ rem If Chocolatey is already installed effects should be benign.
 rem ====================
 setlocal
 
-start "install-choco" /wait cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"
+echo bootstrapping...
 
-start "choco-upgrade" /wait cmd /c choco upgrade all /y
+if not exist "%ProgramData%\Chocolatey\choco.exe" powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"
+
+call refreshenv
+
+choco upgrade all /y
+
+call refreshenv
 
 endlocal
