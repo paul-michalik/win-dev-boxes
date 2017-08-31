@@ -1,5 +1,7 @@
 @echo off
-
+rem ====================
+rem Deploy all relevant scripts to specified environment
+rem ====================
 setlocal
 
 set "SourceDir=%~dp0"
