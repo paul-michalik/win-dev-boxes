@@ -4,21 +4,10 @@ rem Install choco and upgrade all packages.
 rem ====================
 setlocal
 
-if not exist "%ProgramData%\Chocolatey\choco.exe" (
-    echo Bootstrapping chocolatey...
-    powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"
-) else (
-    echo found "%ProgramData%\Chocolatey\choco.exe"...
-)
-
-call refreshenv
-
-choco upgrade all /y
-
-call refreshenv
-
+call "%~dp0choco-bootstrap.bat"
+ 
 choco install %* /y
 
-call refereshenv
+call RefreshEnv
 
 endlocal
