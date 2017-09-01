@@ -11,7 +11,7 @@ if not exist "%ProgramData%\Chocolatey\choco.exe" (
     echo found "%ProgramData%\Chocolatey\choco.exe"...
 )
 
-call RefreshEnv
+call "%ProgramData%\chocolatey\bin\RefreshEnv
 
 choco upgrade all /y
 
