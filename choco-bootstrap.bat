@@ -2,7 +2,6 @@
 rem ====================
 rem Install choco and upgrade all packages. 
 rem ====================
-setlocal
 
 if not exist "%ProgramData%\Chocolatey\choco.exe" (
     echo Bootstrapping chocolatey...
@@ -16,5 +15,3 @@ call "%ProgramData%\chocolatey\bin\RefreshEnv
 choco upgrade all /y
 
 call RefreshEnv
-
-endlocal
