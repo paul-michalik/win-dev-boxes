@@ -1,3 +1,0 @@
-git --packageParameters "/NoShellIntegration /GitOnlyOnPath"
-cmake
-visualstudio2017buildtools --package-parameters "--locale en-US --includeRecommended --includeOptional --lang en-US--add Microsoft.VisualStudio.Workload.MSBuildTools --add Microsoft.VisualStudio.Workload.VCTools"

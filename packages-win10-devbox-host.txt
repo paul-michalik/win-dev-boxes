@@ -1,4 +1,0 @@
-git --packageParameters "/NoShellIntegration /GitOnlyOnPath"
-tortoisegit
-docker-for-windows
-vagrant

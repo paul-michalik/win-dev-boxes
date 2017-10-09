@@ -2,23 +2,23 @@
 Rationale
 =================
 
-Scripts to set up or bootstrap virtual and physical Windows development or CI/CD boxes.
+Scripts to set up or bootstrap virtual and physical development boxes or CI/CD boxes. 
 
-1. Add new packages-*.txt list as required or re-use the existing one. The packages-*.txt files contain a new-line separated list of chocolatey packages with proper arguments forwarded to choco. There are few shortcut scripts intended to ease 
-the usage but of course you can use the chcoco command line or the Chocolatey GUI app (= https://chocolatey.org/packages/ChocolateyGUI) directly. 
-2. Install Chocolatey: Right-mouse click on "install-choco" and "run as administrator"
-3. Option (a): Right-mouse click on "install" and "run as administrator"
-   Option (b): Start cmd.exe "as an administrator" from the start menu and run "install". The set
-   Option (c): Use chocolatey directly from a "administrator command prompt". Open cmd.exe "as administrator" and "choco" 
-   should be available. Please refer to https://chocolatey.org/docs for more 
-   information and https://chocolatey.org/docs/commands-reference for full command reference.
+1. Select the required use case: Choose Windows version (win7, win10, winserver-...) and scenario (devbox, devbox-host, cibox, ...). "Host" variants are provisioned with tools required to act as hosts for virtualized or Dockerized boxes. "Devbox" is provisioned with interactive development tools (Visual Studio, etc) and the "cibox" has a bare minimum to run a build and tests. 
+2. Right-mouse click the respective *.bat file and "run as administrator" or run "runas /user:Administrator win10-cibox.bat"
 
 =================
-Shortcut scripts
+Adding new boxes
 =================
 
-"install" - install chcolatey and all packages listed in packages-*.txt (*). Always run the script with elevated provileges = "run as administrator". Example usage: "install packages-win10-cibox.bat"
+1. Add new packages-<scenario-name>.config files as required or re-use the existing one. The packages-*.config file must obey to the NuGet or Chocolatey specification as defined on Choco homepage: https://chocolatey.org/docs/commands-install. 
+2. Provide an invocation script <scenario-name>.bat. Invoke to provision the machine. The invcation scripts are all identical - a "<scenario-name>.bat" invokes "choco install packages-<scenario-name>.config /y"
 
-"upgrade" - upgrades chcolatey and all packages listed in packages.txt. 
 
-"uninstall" - uninstalls all packages listed in packages.txt
+=================
+Auxiliary scripts
+=================
+
+"deploy-scripts.bat" - Copy contents of the directory to specified location. 
+
+"install-choco.bat" - Bootstraps Choclatey and installs the packages passed via CLI. 
