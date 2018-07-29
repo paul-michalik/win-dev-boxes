@@ -12,6 +12,6 @@ if not exist "%ProgramData%\Chocolatey\choco.exe" (
 
 call "%ProgramData%\chocolatey\bin\RefreshEnv
 
-choco upgrade all /y
+choco upgrade chocolatey /y
 
 call RefreshEnv
