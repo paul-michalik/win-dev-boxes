@@ -1,0 +1,6 @@
+cmake.install --install-arguments='ADD_CMAKE_TO_PATH=System'
+git.install --package-parameters="/NoShellIntegration /GitOnlyOnPath /WindowsTerminal /SChannel"
+tortoisegit
+chocolateygui
+previewconfig
+winmerge
