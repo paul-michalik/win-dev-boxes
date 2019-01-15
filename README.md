@@ -6,3 +6,9 @@ This project contains scripts to bootstrap virtual and physical Windows boxes ai
 2. Right-mouse click the respective *.bat file and "run as administrator" or run "runas /user:Administrator win10-cibox.bat"
 
 ## Adding new box configurations
+
+## Configure directly via Boxstarter Web App
+|Click link to run  |Description  |
+|---------|---------|
+|<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/paul-michalik/win-dev-boxes/tree/feature/switch-to-txt-based-configuration/win10-base-box.bat'> Paul's basic Windows development box</a> | **Windows Explorer settings:** Show Hidden Files and Folders, unused apps removed |
+
