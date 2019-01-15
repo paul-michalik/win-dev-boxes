@@ -10,5 +10,5 @@ This project contains scripts to bootstrap virtual and physical Windows boxes ai
 ## Configure directly via Boxstarter Web App
 |Click link to run  |Description  |
 |---------|---------|
-|<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/paul-michalik/win-dev-boxes/tree/feature/switch-to-txt-based-configuration/hello-world.bat'> Paul's basic Windows development box</a> | **Windows Explorer settings:** Show Hidden Files and Folders, unused apps removed |
+|<a href='https://raw.githubusercontent.com/paul-michalik/win-dev-boxes/feature/switch-to-txt-based-configuration/hello-world.bat'> Paul's basic Windows development box</a> | **Windows Explorer settings:** Show Hidden Files and Folders, unused apps removed |
 
