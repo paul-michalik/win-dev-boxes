@@ -1,5 +1,5 @@
 # About this project
-This project contains scripts to bootstrap virtual and physical Windows boxes aimnd specifically at software development scenarios. 
+This project contains scripts to bootstrap virtual and physical Windows boxes aiming specifically at software development scenarios. 
 
 ## How to use
 1. Select the required use case: Choose Windows version (win7, win10, winserver-...) and scenario (devbox, devbox-host, cibox, ...). "host" variants are provisioned with tools required to act as hosts for virtualized or Dockerized boxes. "devbox" variants are provisioned with interactive development tools (Visual Studio, etc) and "cibox" variants has a bare minimum to run a build and tests. 
