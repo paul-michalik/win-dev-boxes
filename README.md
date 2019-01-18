@@ -4,7 +4,7 @@ This project contains scripts to bootstrap virtual and physical Windows boxes ai
 ## Initial configuration via Boxstarter WebLauncher App
 |Click link to run  |Description  |
 |---------|---------|
-|<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/paul-michalik/win-dev-boxes/feature/switch-to-txt-based-configuration/scripts/BasicBox.ps1'> Paul's basic Windows development box</a> | **Windows Explorer settings:** Show Hidden Files and Folders, unused apps removed |
+|<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/paul-michalik/win-dev-boxes/feature/switch-to-txt-based-configuration/scripts/prepare-box.ps1'> Paul's basic Windows development box</a> | **Windows Explorer settings:** Show Hidden Files and Folders, unused apps removed |
 
 ## How to use
 1. Select the required use case: Choose Windows version (win7, win10, winserver-...) and scenario (devbox, devbox-host, cibox, ...). "host" variants are provisioned with tools required to act as hosts for virtualized or Dockerized boxes (Hyper-V features, Vagrant, Docker for Windows). The "devbox" variants are provisioned with interactive development tools (Visual Studio, etc.) and "cibox" variants has a bare minimum to run a build and tests (CMake, Visual Studio Tools, etc.). 
